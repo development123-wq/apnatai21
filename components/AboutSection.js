@@ -8,6 +8,12 @@ import axios from 'axios';
 const AboutSection = () => {
   const [aboutData, setAboutData] = useState(null);
 
+  // HTML strip function
+  const stripHtml = (html) => {
+    if (!html) return "";
+    return html.replace(/<[^>]+>/g, "");
+  };
+
   useEffect(() => {
     const fetchAboutData = async () => {
       try {
@@ -25,6 +31,7 @@ const AboutSection = () => {
   return (
     <section className="about-section">
       <div className="about-container">
+
         {/* Left: Image */}
         <div className="about-image">
           <Image
@@ -45,21 +52,18 @@ const AboutSection = () => {
             {aboutData?.title || 'About Company'}
           </h4>
 
-          <h2 className="about-title" style={{textTransform:'capitalize'}}>
+          <h2 className="about-title" style={{ textTransform: 'capitalize' }}>
             {aboutData?.short_description
               ? aboutData.short_description
               : 'Where The Beach Meets Timeless Luxury'}
           </h2>
 
-          {/* Safely render description HTML */}
-          <div
-            className="about-description"
-            dangerouslySetInnerHTML={{
-              __html:
-                aboutData?.description ||
-                `<p>Welcome To AP Natai, Your Premier Partner In Luxury Real Estate Within The Serene Locale Of Natai, Phang-Nga.</p><p>Our Presence In The Market Is Not Just About Property Transactions; It’s About Crafting A Lifestyle That Resonates With Tranquility And Sophistication.</p>`,
-            }}
-          />
+          {/* Description without HTML tags */}
+          <p className="about-description">
+            {aboutData?.description
+              ? stripHtml(aboutData.description)
+              : `Welcome To AP Natai, Your Premier Partner In Luxury Real Estate Within The Serene Locale Of Natai, Phang-Nga. Our Presence In The Market Is Not Just About Property Transactions; It’s About Crafting A Lifestyle That Resonates With Tranquility And Sophistication.`}
+          </p>
 
           {aboutData?.button_link ? (
             <a href={aboutData.button_link} target="_blank" rel="noopener noreferrer">

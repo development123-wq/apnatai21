@@ -24,7 +24,9 @@ const Header = () => {
       <div className={styles.topBar}>
         <div className={styles.logoSection}>
           <div className={styles.logoBox}>
+            <a href="/">
             <Image src={logoimage} alt="AP Natai Logo" width={200} />
+            </a>
           </div>
         </div>
 

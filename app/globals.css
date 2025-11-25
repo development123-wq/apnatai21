@@ -365,4 +365,7 @@ font-size:10px;
 .details-heading{
   font-size:20px !important;
 }
+.form-box{
+  margin:auto !important;
+}
 }

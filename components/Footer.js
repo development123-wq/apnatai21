@@ -60,14 +60,15 @@ const Footer = () => {
           <div className="footer-left">
             <img src="/images/logo/logo.png" alt="AP Natai" className="logoImage footerlogoImage" width="300px"/>
             <p className="logoText">
-              Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.
+              At AP Natai, we understand the nuances of this idyllic region and are dedicated to providing bespoke services that cater to your discerning tastes.
             </p>
             <p className="logoText" style={{marginTop:'20px'}}>
-              Lorem Ipsum Is Simply Dummy Text Of The Printing. Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry. Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.
+              Our in-depth knowledge of Natai’s real estate dynamics enables us to offer tailored advice, ensuring our clients make informed decisions. Whether it’s securing your dream property or managing your estate, we guarantee a service that is both comprehensive and personalised.
             </p>
           </div>
 
           <div className="footer-links">
+            <div className="footer-links-div">
             <div className="company">
               <h3>COMPANY</h3>
               <ul>
@@ -95,8 +96,9 @@ const Footer = () => {
                 <li><a href="#">Villa</a></li>
               </ul>
             </div>
+            </div>
 
-            <div>
+            <div className="reach-us-div">
               <h3>REACH US</h3>
               <ul>
                 <li style={{display:'flex'}}><FaPhoneAlt /><span style={{paddingLeft:'10px'}}>+66 81 979 9307</span></li>
@@ -109,7 +111,9 @@ const Footer = () => {
                 <a href="#"><FaTwitter /></a>
                 <a href="https://www.linkedin.com/company/apnataibeach/"><FaLinkedinIn /></a>
                 <a href="https://www.facebook.com/apnataibeach"><FaFacebookF /></a>
-              </div>
+              </div><br></br>
+          <ul  className="footer-bottom-mobile-view" style={{columnCount:'3',listStyleType:'none'}}> <li style={{borderRight:'1px solid #dcdcdc60',textAlign:'center'}}><a href="/privacy-policy">Privacy Policy</a></li> <li style={{borderRight:'1px solid #dcdcdc60',textAlign:'center'}}><a href="/cookie-policy">Cookie Policy</a></li> <li><a href="/terms-conditions1">Terms & Conditions</a></li> </ul>
+
             </div>
           </div>
         </div>
@@ -117,7 +121,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="footer-bottom">
           <p>Copyright© 2025 | AP Natai | All Rights Reserved.</p>
-          <ul style={{columnCount:'3',listStyleType:'none'}}> <li style={{borderRight:'1px solid #dcdcdc60',textAlign:'center'}}><a href="/privacy-policy">Privacy Policy</a></li> <li style={{borderRight:'1px solid #dcdcdc60',textAlign:'center'}}><a href="/cookie-policy">Cookie Policy</a></li> <li><a href="/terms-conditions1">Terms & Conditions</a></li> </ul>
+          <ul  className="footer-bottom-mobile-hide" style={{columnCount:'3',listStyleType:'none'}}> <li style={{borderRight:'1px solid #dcdcdc60',textAlign:'center'}}><a href="/privacy-policy">Privacy Policy</a></li> <li style={{borderRight:'1px solid #dcdcdc60',textAlign:'center'}}><a href="/cookie-policy">Cookie Policy</a></li> <li><a href="/terms-conditions1">Terms & Conditions</a></li> </ul>
         </div>
       </footer>
     </>

@@ -55,6 +55,7 @@ export default function AgentsList() {
               marginBottom: "20px",
               gap: "20px",
             }}
+            className="agent-card-box"
           >
             <img
               src={`https://techzenondev.com/apnatai/public/${agent.image}`}
@@ -99,6 +100,7 @@ export default function AgentsList() {
               lineHeight: 1.6,
               color: "#444",
             }}
+            className="description-agent"
           >
             {agent.description
               ? stripHtml(agent.description).slice(0, 200) + "..."

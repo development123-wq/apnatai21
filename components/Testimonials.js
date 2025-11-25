@@ -52,7 +52,7 @@ export default function Testimonials() {
   return (
     <div className="testimonials-wrapper">
       <div className="fancy-mainheading">
-        <h2>What Our Clients <span>Say About Us</span></h2>
+        <h2>Happy Clients <span>Say About Us</span></h2>
       </div>
 
       {testimonials.length > 0 ? (

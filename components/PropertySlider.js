@@ -69,7 +69,7 @@ export default function PropertySlider() {
   ];
 
   return (
-    <section className="property-section">
+    <section className="property-section property-section-home">
       <div className="property-bg">
         <Image src="/images/beach-bg1.jpg" alt="Background" fill priority />
       </div>

@@ -18,11 +18,14 @@
   }
 }
 .about-image{
-  width:600px;
+  max-width:600px;
+  width:100%;
   text-align:center;
 }
+
+
 .about-content{
-  width:600px;
+  width:100%;
 
 }
 .about-image img {

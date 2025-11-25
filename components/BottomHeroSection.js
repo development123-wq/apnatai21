@@ -6,8 +6,8 @@ const BottomHero = () => {
   return (
    <div className="hero-maincontainer">
     <div className="hero-container">
-      <div className="content-overlay">
-        <div className="text-block">
+      <div className="content-overlay content-overlay-custom-two">
+        <div className="text-block bottom-text-block">
           <h1 className="heading">
             Escape The Ordinary <br />
             Embrace The Ocean
@@ -20,7 +20,7 @@ const BottomHero = () => {
           </button>
         </div>
 
-        <div className="stats-bar">
+        <div className="stats-bar stats-bar-custom">
           <div className="stat-item">
             <p className="stat-number">20+</p>
             <p className="stat-label">Years Of Experience</p>

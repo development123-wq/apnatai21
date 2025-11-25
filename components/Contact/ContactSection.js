@@ -19,7 +19,7 @@ const ContactSection = () => {
           ></iframe>
 
           {/* Optional Social Icons */}
-          <div className="">
+          <div className="social-one">
             <a href="#" className="social-icon fb">F</a>
             <a href="#" className="social-icon in">in</a>
             <a href="#" className="social-icon ig">IG</a>

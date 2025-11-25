@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Banner from '../components/Banner';
+import MobileBanner from '../components/MobileBanner';
 import AboutSection from '../components/AboutSection';
 import PropertyCard from '../components/PropertyCard';
 import PropertySlider from '../components/PropertySlider';
@@ -17,7 +18,14 @@ export default function Home() {
   return (
     <>
       <Header />
+      <div className="desktop-banner">
       <Banner />
+      </div>
+
+      
+      <div className="mobile-banner">
+      <MobileBanner />
+      </div>
       <AboutSection />
       <PropertyCard />
       <PropertySlider/>

@@ -168,14 +168,14 @@ const Banner = () => {
             className={activeTab === "rentals" ? "active-tab" : ""}
             onClick={() => setActiveTab("rentals")}
           >
-            For Rentals
+            For Rent
           </button>
 
           <button
             className={activeTab === "realestate" ? "active-tab" : ""}
             onClick={() => setActiveTab("realestate")}
           >
-            For Real Estate
+            For Sale
           </button>
         </div>
 

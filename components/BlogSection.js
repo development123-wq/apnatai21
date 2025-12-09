@@ -57,13 +57,13 @@ export default function BlogSection() {
             <div className="blog-content">
               <div className="blog-date">
                 <h2>{new Date(post.publish_date).getDate()}</h2>
-                <p>{new Date(post.publish_date).toLocaleString('default', { month: 'short' })}</p>
+                <p style={{color:'#000',lineHeight:'20px'}}>{new Date(post.publish_date).toLocaleString('default', { month: 'short' })}</p>
               </div>
 
               <div className="blog-details">
                 <h3 className="blog-title">{post.title}</h3>
 
-                <p className="blog-desc">
+                <p className="blog-desc" style={{color:'#000',lineHeight:'20px'}}>
                   {stripHTML(post.description)}
                 </p>
 

@@ -68,11 +68,11 @@ const AboutSection = () => {
           {aboutData?.button_link ? (
             <a href={aboutData.button_link} target="_blank" rel="noopener noreferrer">
               <button className="about-button">
-                {aboutData?.button_title || 'Know More'} ❯❯
+                {aboutData?.button_title || 'Learn More'} ❯❯
               </button>
             </a>
           ) : (
-            <button className="about-button">Know More ❯❯</button>
+            <button className="about-button">Learn More ❯❯</button>
           )}
         </div>
       </div>

@@ -81,9 +81,7 @@ export default function PropertySlider() {
               Properties For <span>Rent</span>
             </h2>
             <p className="slider-heading">
-              Lorem Ipsum Is Simply Dummy Text Of The Printing Has Been
-              <br />
-              The Lorem Ipsum Has Been The Standard Book.
+              Explore the latest rental properties with comfort, style, and convenience.
             </p>
           </div>
 
@@ -117,7 +115,7 @@ export default function PropertySlider() {
                 </div>
                 <div className="property-info">
                   <h3>{item.title}</h3>
-                  <p>{item.subtitle}</p>
+                  <p style={{color:'#000',lineHeight:'20px'}}>{item.subtitle}</p>
 
                   <div className="property-features">
                     <div>🛏 {item.bedrooms} Bedrooms</div>

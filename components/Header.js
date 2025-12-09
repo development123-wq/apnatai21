@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from '../public/css/Header.module.css';
-import logoimage from '../public/images/logo/logo.png';
+import logoimage from '../public/images/logo/logo1.png';
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -25,7 +25,7 @@ const Header = () => {
         <div className={styles.logoSection}>
           <div className={styles.logoBox}>
             <a href="/">
-            <Image src={logoimage} alt="AP Natai Logo" width={200} />
+            <Image src={logoimage} alt="AP Natai Logo" width={200} height={70} />
             </a>
           </div>
         </div>
@@ -73,8 +73,8 @@ const Header = () => {
             </a>
             <div className={styles.dropdownContent}>
               <a href="/browse-catalog">Browse Catalog</a>
-              <a href="/for-rentals">For Rentals</a>
-              <a href="/for-real-estates">For Real Estate</a>
+              <a href="/for-rentals">For Rent</a>
+              <a href="/for-real-estates">For Sale</a>
             </div>
           </div>
           <a href="/news">News</a>

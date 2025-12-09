@@ -79,12 +79,12 @@ export default function Testimonials() {
               </div>
               <div className="testimonial-card-content">
                 <p
-                  className="testimonial-text"
+                  className="testimonial-text" style={{color:'#000',lineHeight:'20px'}}
                   dangerouslySetInnerHTML={{ __html: item.review || '' }}
                 />
                 <div className="testimonial-footer">
                   <h3>{item.name || 'Anonymous'}</h3>
-                  <p>{item.position || 'Happy Customer'}</p>
+                  <p style={{color:'#000',lineHeight:'20px'}}>{item.position || 'Happy Customer'}</p>
                   <div className="quote-icon">❞</div>
                 </div>
               </div>

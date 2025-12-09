@@ -158,7 +158,7 @@ const Banner = () => {
         {/* LEFT FORM (Rentals) */}
         <div className="form-box">
           <div className="form-title form-title-one">
-            <p>For Rentals</p>
+            <p>For Rent</p>
           </div>
 
           <form>
@@ -207,7 +207,7 @@ const Banner = () => {
         {/* RIGHT FORM (Real Estate) */}
         <div className="form-box">
           <div className="form-title form-title-two">
-            <p>For Real Estate</p>
+            <p>For Sale</p>
           </div>
 
           <form onSubmit={handleRealEstateSearch}>

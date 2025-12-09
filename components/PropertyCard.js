@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import "../public/css/PropertyCard.css";
 
+const IMAGE_BASE_URL = "https://techzenondev.com/apnatai/storage/app/public/";
+
 const PropertyCard = () => {
   const [properties, setProperties] = useState([]);
 
@@ -22,13 +24,11 @@ const PropertyCard = () => {
     fetchProperties();
   }, []);
 
-  // ⭐ Remove all HTML tags from description
   const stripHtml = (html = "") => {
     if (!html) return "";
     return html.replace(/<[^>]+>/g, "");
   };
 
-  // ⭐ Limit description to 25 words
   const limitWords = (text, limit = 25) => {
     const words = text.split(" ");
     if (words.length <= limit) return text;
@@ -45,17 +45,28 @@ const PropertyCard = () => {
 
       <div className="property-container">
         {properties.map((property) => {
-          const image =
+          const mainImagePath =
+            property.main_image ||
             property.featured_image ||
             property.image ||
             property.thumbnail ||
-            "/images/property/pro1.png";
+            "";
 
-          const title =
+          const image = mainImagePath
+            ? `${IMAGE_BASE_URL}${mainImagePath}`
+            : "/images/property/pro1.png";
+
+          // ---- TITLE + ALT TEXT ----
+          const rawTitle =
             property.title ||
             property.name ||
             property.property_title ||
-            "Property";
+            "";
+
+          const title =
+            rawTitle && rawTitle.trim().length > 0
+              ? rawTitle
+              : "Natai Beach property image";
 
           const rawDesc =
             property.short_description ||
@@ -87,7 +98,7 @@ const PropertyCard = () => {
               <div className="image-wrapper">
                 <Image
                   src={image}
-                  alt={title}
+                  alt="title" 
                   fill
                   className="property-image"
                 />
@@ -98,7 +109,12 @@ const PropertyCard = () => {
                   <a href={`/property/${slug}`}>{title}</a>
                 </h3>
 
-                <p className="property-description">{cleanDesc}</p>
+                <p
+                  style={{ color: "#000", lineHeight: "20px" }}
+                  className="property-description"
+                >
+                  {cleanDesc}
+                </p>
 
                 <div className="property-details">
                   <div className="detail-item">🛏 {bedrooms} Bedrooms</div>
@@ -112,10 +128,11 @@ const PropertyCard = () => {
                   <p className="price">฿{price}</p>
                 </div>
 
-                {/* ⭐ FIXED READ MORE BUTTON — REDIRECT USING slug */}
                 <button
                   className="read-more-property"
-                  onClick={() => window.location.href = `/property/${slug}`}
+                  onClick={() =>
+                    (window.location.href = `/property/${slug}`)
+                  }
                 >
                   Read More »
                 </button>
@@ -126,7 +143,9 @@ const PropertyCard = () => {
       </div>
 
       <div className="loadmore-btn">
-        <button className="about-button">Load More ❯❯</button>
+        <a className="about-button" href="./for-real-estates">
+          Load More ❯❯
+        </a>
       </div>
     </>
   );

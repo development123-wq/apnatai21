@@ -58,7 +58,7 @@ export default function AgentSlider() {
       <div className="left-side">
         <h3 className="main-title">Meet</h3>
         <h2 className="highlight-title">Our Agents</h2>
-        <p className="sub-text">
+        <p className="sub-text" style={{color:'#000',lineHeight:'20px'}}>
           Connect with our expert agents, dedicated to guiding you with clarity, trust, and deep market knowledge. Experience seamless support from professionals who prioritize your goals.
         </p>
 
@@ -93,7 +93,7 @@ export default function AgentSlider() {
               </div>
 
               {/* FIXED: remove HTML tags from description */}
-              <p className="agent-description">
+              <p className="agent-description" style={{color:'#000',lineHeight:'20px'}}>
                 {agent.description ? agent.description.replace(/<[^>]+>/g, '') : ''}
               </p>
             </div>

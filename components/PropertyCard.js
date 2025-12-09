@@ -98,7 +98,7 @@ const PropertyCard = () => {
               <div className="image-wrapper">
                 <Image
                   src={image}
-                  alt="title" 
+                  alt="titles" 
                   fill
                   className="property-image"
                 />
